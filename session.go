@@ -154,7 +154,7 @@ func (s *Session) OpenStream() (*Stream, error) {
 }
 
 // Open returns a generic ReadWriteCloser
-func (s *Session) Open() (io.ReadWriteCloser, error) {
+func (s *Session) Open() (net.Conn, error) {
 	return s.OpenStream()
 }
 
