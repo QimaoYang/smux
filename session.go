@@ -183,7 +183,7 @@ func (s *Session) AcceptStream() (*Stream, error) {
 }
 
 // Accept Returns a generic ReadWriteCloser instead of smux.Stream
-func (s *Session) Accept() (io.ReadWriteCloser, error) {
+func (s *Session) Accept() (net.Conn, error) {
 	return s.AcceptStream()
 }
 
